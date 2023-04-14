@@ -125,6 +125,7 @@ h1 {
   color: var(--color-neutral-100);
   background: var(--color-secondary);
   box-shadow: 0 10px 20px 1px var(--color-neutral-50);
+  cursor: pointer;
 }
 
 .btn:is(:hover, :focus) {
