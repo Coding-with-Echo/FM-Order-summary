@@ -1,0 +1,157 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(225, 100%, 94%);
+  --color-primary-lighter: hsl(225, 100%, 97%);
+  --color-secondary: hsl(245, 75%, 52%);
+  --color-hover: hsl(245, 75%, 65%);
+
+  --color-neutral-900: hsl(223, 47%, 23%);
+  --color-neutral-500: hsl(224, 23%, 55%);
+  --color-neutral-100: hsl(225, 100%, 98%);
+  --color-neutral-50: hsl(225, 100%, 88%);
+  --color-neutral-25: hsl(0, 0%, 95%);
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: var(--fw-bold);
+  color: var(--color-neutral-500);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary);
+  margin: 3rem;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--fw-black);
+  color: var(--color-neutral-900);
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* card */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-neutral-100);
+  box-shadow: 0 10px 20px 1px var(--color-neutral-50);
+  max-width: 370px;
+}
+
+.card--body {
+  padding: 2.8rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.card__text {
+  line-height: 1.6;
+  font-weight: var(--fw-medium);
+}
+
+.card__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary-lighter);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+}
+
+.card__year {
+  color: var(--color-neutral-900);
+  font-weight: var(--fw-black);
+}
+
+.card__price {
+  font-weight: var(--fw-medium);
+}
+
+.card__annual-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__price-year {
+  margin-left: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.card__plan > a {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+}
+
+.card__plan > a:is(:hover, :focus) {
+  color: var(--color-hover);
+  text-decoration: none;
+}
+
+/* button */
+.btn {
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  color: var(--color-neutral-100);
+  background: var(--color-secondary);
+  box-shadow: 0 10px 20px 1px var(--color-neutral-50);
+}
+
+.btn:is(:hover, :focus) {
+  background: var(--color-hover);
+}
+
+.card__footer > a {
+  font-weight: var(--fw-black);
+  text-decoration: none;
+  color: var(--color-neutral-500);
+}
+
+.card__footer > a:is(:hover, :focus) {
+  color: var(--color-neutral-900);
+}
+
+@media screen and (min-width: 1024px) {
+  .card--body {
+    padding: 3.5rem;
+  }
+
+  .btn,
+  .card__footer > a {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 1.3rem;
+  }
+}
